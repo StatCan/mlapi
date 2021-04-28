@@ -3,9 +3,9 @@ image: python:3.7-alpine
 pages:
   stage: deploy
   script:
-  - pip install sphinx
-  - pip install sphinx-autoapi
+  - pip install -U sphinx
   - pip install myst-parser
+  - pip install sphinx-autoapi
   - cd docs 
   - sphinx-build -b html . public
   artifacts:
