@@ -4,7 +4,7 @@ pages:
   stage: deploy
   script:
   - pip install sphinx
-  - pip install spihinx-autoapi
+  - pip install sphinx-autoapi
   - pip install myst-parser
   - cd docs 
   - sphinx-build -b html . public
