@@ -28,7 +28,7 @@ visit: http://localhost/8888/docs
 
 #### 4. Visit the Sphinx Documentation
 
-visit:
+visit: https://asolism.gitlab.io/mlapi/
 
 
 #### 5. Generate Local API and Markdown Documentation
