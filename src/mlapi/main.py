@@ -72,7 +72,7 @@ async def predict(iris: IrisPredictionInput) :
     return clf.predict(iris.data)
 
 @app.post("/train")
-async def train(gradient_boosting: bool = False):
+async def train(gradient_boosting: bool = False) -> bool:
     """
     FastAPI POST route '/train' endpoint to train our model
  
@@ -82,9 +82,8 @@ async def train(gradient_boosting: bool = False):
 
     Returns:
         bool:
-            A prediction response object
+            A boolean value identifying if trainning was successful.
     """
     data = clf.dataset()
-    clf.train(data['X'], data['y'], gradient_boosting)
-    return True
+    return clf.train(data['X'], data['y'], gradient_boosting)
 

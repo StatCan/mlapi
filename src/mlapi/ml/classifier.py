@@ -48,7 +48,7 @@ class IrisClassifier:
     """
     classifier : Pipeline   = None 
 
-    def train(self, X: np.ndarray, y:np.ndarray, gradient_boosting:bool = False):
+    def train(self, X: np.ndarray, y:np.ndarray, gradient_boosting:bool = False) -> bool:
         """
         Trains the Iris Classifier
        
@@ -70,6 +70,7 @@ class IrisClassifier:
             ('clf', clf)
         ])
         self.classifier.fit(X,y)
+        return True
     
     def predict(self, data: List[conlist(float, min_items=4, max_items=4)]) -> dict:
         """
